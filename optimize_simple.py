@@ -1,4 +1,5 @@
 # pylint: disable=invalid-name
+# Colloboration between Franz Bethke and Melanie Koser (Humboldt-Universität zu Berlin)
 """Minimize spin field energy.
 
     E(u) = ...
