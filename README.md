@@ -30,7 +30,7 @@ Packages needed:
 
 
 Expected energy regimes:
-        In the follwowing let eps = 1/n and delta the given material parameter.
+        In the following, let eps = 1/n and delta the given material parameter.
 
   1. Ferromagnet if delta**0.5 < eps:
      Constant spin field with energy delta**2 and no vortices
