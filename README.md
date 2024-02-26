@@ -34,6 +34,10 @@ Optimization with Scipy from a chosen start value:
     mulit-laminate, Spin field using a vortex structure, random spin field, Spin field 
     rotating optimal with the same profile away from the left boundary
 
+Output: Generates figures of the optimized spin field during the optimization. The intermediate
+ optimized spin fields are saved in an associated folder. Furthermore, this folder will contain
+ svg images of the start configuration and the end configuration.
+
 Expected energy regimes:
         Let eps = 1/n and delta the given material parameter in the following.
 
