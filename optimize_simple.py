@@ -303,6 +303,15 @@ class SpinFieldConfig:
 
 
 def get_spin_field_guess(spin_config, guess='const rot'):
+    """ Input: Spin configuration, guess (choice of start value)
+        Output: Spin configuration of the start value depending on the guess:
+        
+        Ferromagnet : Constant spin field
+        Laminate : There is one laminate between the different optimal profiles
+        Multi-laminate : multiple laminates between the different optimal profiles 
+        multi vortex : A vortex construction with vortices close to the left boundary
+        random : a random start configuration
+        some curls : configuration for testing """
 
     delta = spin_config.delta
     n, m = spin_config.shape[:-1]
