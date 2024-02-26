@@ -16,7 +16,18 @@ For an overview work we refer to:
   dimensional frustrated spin system: emergence and rigidity of chirality transitions”.
 
   Hung T. Diep, ed. Frustrated spin systems. 2nd ed.
-  
+
+
+Packages needed:
+
+  os
+  sys
+  datetime 
+  scipy
+  IPython
+  matplotlib
+  numpy
+
 
 Conventions for variable names:
 
