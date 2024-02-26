@@ -501,8 +501,6 @@ def main():
 
     print(f"{result = }")
     print(f"{initial_energy = }")
-   #print(results)
-   # print(Steps)
 
     plt.figure()
     plt.scatter(Steps, results)
@@ -513,8 +511,6 @@ def main():
 
     plt.show()
     # embed()
-
-    # Konvergenz rate
 
 
 
