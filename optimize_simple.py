@@ -183,9 +183,13 @@ class SpinFieldConfig:
         self.H = Q + Q.T
 
     def to_tensor(self, x):
+        """ Transforms sparse matrix to tensor """
         return x.reshape(self.shape)
 
     def get_hspeed(self, x):
+        """ Computes the horizontal speed with respect to a spin field 
+        Input: self (class of spin configurations)
+        Output: Field of angle velocity field """
         bx = self.Cb@self.b + self.Cx@x
         field = bx.reshape(self.shape[0], self.shape[1] + 1, 2)
 
@@ -197,6 +201,7 @@ class SpinFieldConfig:
         return hsign * hspeed
 
     def get_vspeed(self, x):
+        """ Same as above for the vertical speed """ 
         bx = self.Cb@self.b + self.Cx@x
         field = bx.reshape(self.shape[0], self.shape[1] + 1, 2)
 
@@ -208,7 +213,7 @@ class SpinFieldConfig:
         return vsign * vspeed
 
     def plot(self, x, axes=None, cbaxis=None, **kwargs):
-
+        """ Plot the Spin configuration """
         axes = axes if axes is not None else plt.subplots(1, 2,
                                                           figsize=(14, 7))[1]
 
@@ -277,15 +282,19 @@ class SpinFieldConfig:
         return axes, cbaxis
 
     def energy(self, x):
+        """ Energy of a Spin configuration """
         return self.q.T@x + 1/2*x.T@self.H@x
 
     def grad_energy(self, x):
+        """ The gradient of the energy """
         return self.q + self.H@x
 
     def hess_energy(self, _):
+         """ The hessian of the energy """
         return self.H
 
     def constraints(self, x):
+         """ Introduce the constraints as an L2 penalization"""
         norms = np.linalg.norm(self.to_tensor(x), axis=2).reshape(-1)
         return 0.5*(norms**2 - 1)
 
