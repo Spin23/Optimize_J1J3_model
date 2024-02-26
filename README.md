@@ -29,8 +29,12 @@ Packages needed:
   numpy,
 
 
+Optimization with Scipy from a chosen start value:
+    constant spin field (ferromagnet), Helimagnet with one laminate, Helimagnet with a 
+    mulit-laminate, Spin field using a vortex structure, random spin field
+
 Expected energy regimes:
-        In the following, let eps = 1/n and delta the given material parameter.
+        Let eps = 1/n and delta the given material parameter in the following.
 
   1. Ferromagnet if delta**0.5 < eps:
      Constant spin field with energy delta**2 and no vortices
