@@ -307,6 +307,7 @@ def get_spin_field_guess(spin_config, guess='const rot'):
         Output: Spin configuration of the start value depending on the guess:
         
         Ferromagnet : Constant spin field
+        const rot: Optimal profile everywhere except on the left boundary
         Laminate : There is one laminate between the different optimal profiles
         Multi-laminate : multiple laminates between the different optimal profiles 
         multi vortex : A vortex construction with vortices close to the left boundary
