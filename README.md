@@ -29,30 +29,6 @@ Packages needed:
   numpy
 
 
-Conventions for variable names:
-
-  eps : the distance between horizontally or vertically neighbouring atoms
-
-  n : the number of rows in the atom grid
-        indexed by i
-
-  m : the number of columns in the atom grid
-        indexed by j
-
-  u : a matrix of shape n x m x 2
-        represents a spin field
-        u[i, j] is the 2d vector at (x, y) = (j*eps, i*eps)
-
-  alpha : interaction parameter
-
-  C1 : Shift matrix in horizontal direction
-
-  C2 : Shift matrix in vertical direction
-
-  x : a flattend version of u
-        x == u.reshape(-1) should always be true
-
-
 Expected energy regimes:
         In the follwowing let eps = 1/n and delta the given material parameter.
 
@@ -67,3 +43,6 @@ Expected energy regimes:
      energy = eps*delta^{1/2}
      with opt/(eps*2pi) vortices where opt= arccos(1-delta), which is
      the optimal angle velocity.
+
+
+
