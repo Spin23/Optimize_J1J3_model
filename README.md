@@ -7,7 +7,8 @@ lattice with the lattice width eps contained in (0,1). To each lattice point we 
 so-called Spin vector. Let n be the largest integer smaller than 1/eps. We want to understand the properties 
 of the ground states of the energy
     E(u) = -alpha u^T C1 u + u^TC2 u,
-where u is a n times n dimensional tensor mapping each element to a Spin vector of a lattice point.  
+where u is a n times n dimensional tensor mapping each element to a Spin vector of a lattice point. 
+
 
 For an overview work we refer to:
 
@@ -15,6 +16,7 @@ For an overview work we refer to:
   dimensional frustrated spin system: emergence and rigidity of chirality transitions”.
 
   Hung T. Diep, ed. Frustrated spin systems. 2nd ed.
+  
 
 Conventions for variable names:
 
@@ -39,15 +41,8 @@ Conventions for variable names:
   x : a flattend version of u
         x == u.reshape(-1) should always be true
 
-  Note: A shift of the indices in the first axis (rows) of u by +1, i.e.,
-          u[i, j] -> u[i+1, j], ends up beeing an upwards vertical shift of the
-          represented spin field y -> y + eps.
 
-   A shift of the indices in the second axis (columns) of u by +1, i.e.,
-   u[i, j] -> u[i, j+1], ends up beeing a right horizontal shift of the
-   represented spin field x -> x + eps.
-
-  Expected energy regimes:
+Expected energy regimes:
         In the follwowing let eps = 1/n and delta the given material parameter.
 
   1. Ferromagnet if delta**0.5 < eps:
