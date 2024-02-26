@@ -2,7 +2,7 @@
 # Colloboration between Franz Bethke and Melanie Koser (Humboldt-Universität zu Berlin)
 """Minimize spin field energy.
 
-    E(u) = ...
+    E(u) = -alpha u^T C1 u + u^TC2 u 
 
     Conventions for variable names:
 
@@ -17,6 +17,12 @@
     u : a matrix of shape n x m x 2
         represents a spin field
         u[i, j] is the 2d vector at (x, y) = (j*eps, i*eps)
+
+    alpha : interaction parameter
+
+    C1 : Shift matrix in horizontal direction
+
+    C2 : Shift matrix in vertical direction
 
     x : a flattend version of u
         x == u.reshape(-1) should always be true
@@ -76,7 +82,7 @@ def get_shift_mat(shape, shift, axis, keep_shape=False):
     if axis >= len(shape):
         shape += (axis - len(shape) + 1)*[1]
 
-    # the matrix is build by constructing its nontrivial (off)diagonals
+    # the matrix is built by constructing its nontrivial (off)diagonals
 
     # number of nontrivial diagonals
     ndiags = np.prod(shape[:axis], dtype=int)
@@ -115,7 +121,7 @@ def get_shift_mat(shape, shift, axis, keep_shape=False):
 
 
 def print_tensor(u):
-
+"""  Function printing the spin field u """
     if len(u.shape) < 3:
         print(u)
         return
@@ -131,6 +137,23 @@ def print_tensor(u):
 
 
 class SpinFieldConfig:
+    """ Class of spin fields u, with the attributes 
+    delta : interaction parameter, 
+    alpha : 4(1-delta) (the original interaction parameter),
+    shape : (n, m, 2), where n is the number of rows and m the number of columns, and two the number of entries
+            of the vector u_{i,j},
+    eps : lattice with, here eps = 1/n, 
+    eps_sq : eps^2,
+    b : left boundary condition being equal to [0,1],
+    Cb : Shift matrix for the boundary layer on the left,
+    Cx : Shift matrix for boundary layer on the bottom,
+    q : energy on the left boundary layer, 
+    H : Internal energy
+
+    Moreover, we introduce 
+    C1 : Shift matrix in horizontal direction,
+    C2 : Shift matrix in vertical direction, 
+    C : matrix for the quadratic spin energy E = U C U^T"""
 
     def __init__(self, delta, n, m=None):
 
