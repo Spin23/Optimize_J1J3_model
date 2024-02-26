@@ -26,7 +26,7 @@ Packages needed:
   scipy,
   IPython,
   matplotlib,
-  numpy,
+  numpy
 
 
 Optimization with Scipy from a chosen start value:
