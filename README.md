@@ -20,13 +20,13 @@ For an overview work we refer to:
 
 Packages needed:
 
-  os
-  sys
-  datetime 
-  scipy
-  IPython
-  matplotlib
-  numpy
+  os,
+  sys,
+  datetime,
+  scipy,
+  IPython,
+  matplotlib,
+  numpy,
 
 
 Expected energy regimes:
