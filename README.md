@@ -67,5 +67,7 @@ the following regimes.
 
 For more details we refer to a upcoming work of Ginster, Koser, and Zwicknagl 2024.
 
+*Credits to Franz Bethke and Melanie Koser*
+
 
 
