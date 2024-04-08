@@ -52,8 +52,8 @@ for a spin field $u \colon \Omega \cap \varepsilon \mathbb{Z}^2\rightarrow \math
 
 **Expected energy regimes:**
         
-Let $\delta = (4-\alpha)/4\in (0,1)$ the given material parameter in the following. We expect 
-the following regimes.
+Let $\delta \coloneqq (4-\alpha)/4\in (0,1)$ the given material parameter in the following. We expect 
+the following regimes:
 
   1. **Ferromagnet** if $\delta^{1/2} \leq \varepsilon$:
      Constant spin field with energy $\delta^2$ and no vortices
