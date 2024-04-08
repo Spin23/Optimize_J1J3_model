@@ -58,7 +58,7 @@ the following regimes.
   1. **Ferromagnet** if $\delta^{1/2} \leq \varepsilon$:
      Constant spin field with energy $\delta^2$ and no vortices
 
-  2.  **Helimagnet** if $\delta^{1/2} \exp(-1/delta) < \varepsilon < \delta^{1/2}$:
+  2.  **Helimagnet** if $\delta^{1/2} \exp(-1/\delta) < \varepsilon < \delta^{1/2}$:
       Multi-laminate more or less with energy
       $\varepsilon\delta^{3/2} (\vert ln(\varepsilon/\delta^{1/2})\vert +1)$ with no vortices
 
