@@ -6,7 +6,9 @@ anti-ferromagnetic interactions are. We assume the atoms of our material are ord
 lattice with the lattice width eps contained in (0,1/2). To each lattice point we associate a normed vector, the 
 so-called Spin vector. Let n be the largest integer smaller than 1/eps. We want to understand the properties 
 of the ground states of the energy
+
     E(u) = -alpha u^T C1_hor u - alpha u^T C1_ver u + u^TC2_hor u + u^T C2_ver u,
+    
 where u is a n times n dimensional tensor mapping each element to a Spin vector of a lattice point and the matrices
 C1_hor, C2_hor, C1_ver, and C2_ver are translation matrices with respect to the horizontal or vertical direction,
 respectively.
