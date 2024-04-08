@@ -37,13 +37,13 @@ for a spin field $u \colon \Omega \cap \varepsilon \mathbb{Z}^2\rightarrow \math
 
 *Laminate* : There is one laminate between the different optimal profiles
 
-*Multi-laminate* : multiple laminates between the different optimal profiles 
+*Multi-laminate* : Multiple laminates between the different optimal profiles 
 
 *Multi vortex* : A vortex construction with vortices close to the left boundary
 
-*Random* : a random start configuration
+*Random* : A random start configuration
 
-*Some curls* : configuration for testing
+*Some curls* : Vortex configuration for testing
 
 
 **Output:** Generates figures of the optimized spin field during the optimization. The intermediate
