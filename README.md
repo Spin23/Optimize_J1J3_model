@@ -1,16 +1,17 @@
 Optimization of the J1-J3 model 
 
-Our goal is to optimize a special Heisenberg model, the J1-J3 energy on a planar rectangle, e.g., (0,1)^2. 
+Our goal is to optimize a special discrete lattice interaction energy, the J1-J3 model on a planar rectangle, e.g., (0,1)^2. 
 Let alpha be an interaction parameter in (0, 4). This parameter decides how strong the ferromagnetic and 
 anti-ferromagnetic interactions are. We assume the atoms of our material are ordered within a regular square 
-lattice with the lattice width eps contained in (0,1). To each lattice point we associate a normed vector, the 
+lattice with the lattice width eps contained in (0,1/2). To each lattice point we associate a normed vector, the 
 so-called Spin vector. Let n be the largest integer smaller than 1/eps. We want to understand the properties 
 of the ground states of the energy
-    E(u) = -alpha u^T C1 u + u^TC2 u,
-where u is a n times n dimensional tensor mapping each element to a Spin vector of a lattice point. 
+    E(u) = -alpha u^T C1_hor u - alpha u^T C1_ver u + u^TC2_hor u + u^T C2_ver u,
+where u is a n times n dimensional tensor mapping each element to a Spin vector of a lattice point and the matrices
+C1_hor, C2_hor, C1_ver, and C2_ver are translation matrices with respect to the horizontal or vertical direction,
+respectively.
 
-
-For an overview work we refer to:
+For an overview work, we refer to:
 
   Marco Cicalese, Marwin Forster, and Gianluca Orlando. “Variational analysis of a two-
   dimensional frustrated spin system: emergence and rigidity of chirality transitions”.
@@ -30,9 +31,9 @@ Packages needed:
 
 
 Optimization with Scipy from a chosen start value:
-    constant spin field (ferromagnet), Helimagnet with one laminate, Helimagnet with a 
+    Constant spin field (ferromagnet), Helimagnet with one laminate, Helimagnet with a 
     mulit-laminate, Spin field using a vortex structure, random spin field, Spin field 
-    rotating optimal with the same profile away from the left boundary
+    rotating optimal away from the left boundary
 
 Output: Generates figures of the optimized spin field during the optimization. The intermediate
  optimized spin fields are saved in an associated folder. Furthermore, this folder will contain
