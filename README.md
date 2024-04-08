@@ -31,23 +31,35 @@ Packages needed:
   matplotlib,
   numpy
 
+OPTIMIZATION WITH SCIPY FROM A CHOSEN START VALUE:
 
-Optimization with Scipy from a chosen start value:
-    Constant spin field (ferromagnet), Helimagnet with one laminate, Helimagnet with a 
-    mulit-laminate, Spin field using a vortex structure, random spin field, Spin field 
-    rotating optimal away from the left boundary
+    Ferromagnet : Constant spin field
+    
+    Const rot: Optimal profile everywhere except on the left boundary
+    
+    Laminate : There is one laminate between the different optimal profiles
+    
+    Multi-laminate : multiple laminates between the different optimal profiles 
+    
+    Multi vortex : A vortex construction with vortices close to the left boundary
+    
+    Random : a random start configuration
+    
+    Some curls : configuration for testing
 
-Output: Generates figures of the optimized spin field during the optimization. The intermediate
+OUTPUTt: Generates figures of the optimized spin field during the optimization. The intermediate
  optimized spin fields are saved in an associated folder. Furthermore, this folder will contain
  svg images of the start configuration and the end configuration.
 
-Expected energy regimes:
-        Let eps = 1/n and delta the given material parameter in the following.
+EXPECTED ENERGY REGIMES:
+        
+Let eps = 1/n and delta = (4-alpha)/4 the given material parameter in the following. We expect 
+the following regimes.
 
-  1. Ferromagnet if delta**0.5 < eps:
+  1. Ferromagnet if delta^0.5 < \eps:
      Constant spin field with energy delta**2 and no vortices
 
-  2.  Helimagnet if delta**0.5 * exp(-1/delta) < eps < delta**0.5:
+  2.  Helimagnet if delta0.5 * exp(-1/delta) < eps < delta**0.5:
       (Multi-laminate more or less) with energy
       eps*delta^{3/2} (|ln(eps/delta^{1/2})| +1) with no vortices
 
